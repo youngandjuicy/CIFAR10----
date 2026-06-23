@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local editor settings
+.vscode/
+
+# Training outputs
+checkpoints/
+runs/
+CIFAR10_train/
+
+# Local datasets
+dataset/
+
+# Logs and temporary files
+*.log
+*.tmp

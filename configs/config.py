@@ -20,3 +20,6 @@ class Config:
     seed = 42
 
     save_best = True
+    save_latest = True
+    resume = False
+    resume_path = "./checkpoints/latest.pth"
