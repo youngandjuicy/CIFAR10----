@@ -16,7 +16,7 @@ class Config:
     momentum = 0.9
     weight_decay = 5e-4
 
-    num_workers = 2
+    num_workers = 0
     seed = 42
 
     save_best = True
