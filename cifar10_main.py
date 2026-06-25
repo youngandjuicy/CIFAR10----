@@ -6,6 +6,7 @@ from torch.optim.lr_scheduler import StepLR
 from configs.config import Config
 from datasets.cifar10 import get_dataloader
 from models.tudui import Tudui
+from models.resnet import ResNet18
 from engine.train import train_one_epoch
 from engine.evaluate import evaluate
 from utils.checkpoint import save_checkpoint, load_checkpoint
@@ -32,7 +33,12 @@ def main():
 
     train_loader, test_loader = get_dataloader(cfg)
 
-    model = Tudui(num_classes=cfg.num_classes)
+    if cfg.model == "tudui":
+        model = Tudui(num_classes=cfg.num_classes)
+    elif cfg.model == "resnet18":
+        model = ResNet18(num_classes=cfg.num_classes)
+    else:
+        raise ValueError(f"Unknown model: {cfg.model}")
     model.to(cfg.device)
 
     criterion = nn.CrossEntropyLoss()

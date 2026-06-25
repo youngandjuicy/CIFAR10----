@@ -7,6 +7,7 @@ class Config:
     checkpoint_dir = "./checkpoints"
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
+    model = "resnet18"  # 可选值: "tudui", "resnet18"
 
     batch_size = 64
     num_epochs = 100
