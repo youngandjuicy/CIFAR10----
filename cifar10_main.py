@@ -4,7 +4,7 @@ import torch.nn as nn
 from torch.optim import SGD
 from torch.optim.lr_scheduler import StepLR
 from configs.config import Config
-from datasets.cifar10 import get_dataloader
+from data.cifar10 import get_dataloader
 from models.tudui import Tudui
 from models.resnet import ResNet18
 from engine.train import train_one_epoch

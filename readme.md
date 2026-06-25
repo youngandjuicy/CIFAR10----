@@ -21,7 +21,7 @@ CIFAR10分类任务/
 ├── cifar10_main.py        # 训练入口
 ├── configs/
 │   └── config.py          # 超参数与路径配置
-├── datasets/
+├── data/
 │   └── cifar10.py         # CIFAR-10 数据加载与预处理
 ├── engine/
 │   ├── train.py           # 单轮训练逻辑
